@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import './AddCategory.css';
 
 export const AddCategory = ({ onNewCategory }) => {
 
@@ -19,13 +19,17 @@ export const AddCategory = ({ onNewCategory }) => {
     }
 
     return (
-        <form onSubmit={ onSubmit }>
+        <form className="search-form" onSubmit={ onSubmit }>
+        <div className="input-container">
             <input 
                 type="text"
+                className="search-input"
                 placeholder="Buscar gifs"
                 value={ inputValue }
                 onChange={ onInputChange }
             />
-        </form>
+            <button type="submit" className="search-button">🔍</button>
+        </div>
+    </form>
     )
 }
